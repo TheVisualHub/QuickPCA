@@ -6,6 +6,9 @@
     width="800">
 
 QuickPCA is a lightweight Python tool for Essential Dynamics Analysis of molecular dynamics trajectories in PyMOL. It automatically detects and loads MD trajectories, performs Principal Component Analysis, and generates a publication-ready report featuring free-energy landscapes, residue cross-correlation maps, explained variance profiles and principal component projections.
+
+Molecular dynamics trajectories have a massive amount of data. If your protein has 1,000 atoms, each frame has 3,000 coordinates (X, Y, Z). If you have 10,000 frames, that is 30 million data points! PCA analyzes this massive dataset and reduces the dimensions. It figures out which atomic movements are just random "noise" and which are the "signals" capturing functional-relevant motions. This algorithm compresses thousands of dimensions down into just two (PC1 and PC2) while preserving the most important information.
+
 ## 👤 Author
 
 This code was developed by **Gleb Novikov**
