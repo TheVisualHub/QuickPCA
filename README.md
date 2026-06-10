@@ -58,7 +58,3 @@ The report includes:
 ## ⚖️ License
 
 Released under the MIT License. If QuickPCA is used in any capacity that contributes to results presented in a publication, thesis, report, or any other form of scholarly or professional work, appropriate citation of QuickPCA is strongly encouraged.
-
-## Citation
-
-If you use QuickPCA in academic work, please cite this repository.
