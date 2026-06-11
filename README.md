@@ -9,6 +9,8 @@ QuickPCA is a lightweight Python tool for Essential Dynamics Analysis of molecul
 
 Molecular dynamics trajectories have a massive amount of data. If your protein has 1,000 atoms, each frame has 3,000 coordinates (X, Y, Z). If you have 10,000 frames, that is 30 million data points! PCA analyzes this massive dataset and reduces the dimensions. It figures out which atomic movements are just random "noise" and which are the "signals" capturing functional-relevant motions. This algorithm compresses thousands of dimensions down into just two (PC1 and PC2) while preserving the most important information.
 
+Unlike common PCA approaches, which construct and diagonalize the covariance matrix, quickPCA performs SVD decomposition using scikit-learn directly on the (n_frames × 3N) data matrix. This bypasses the expensive covariance construction and diagonalization: since n_frames << 3N, this is significantly faster and numerically more stable, while yielding mathematically identical principal components.
+
 ## 👤 Author
 
 This code was developed by **Gleb Novikov**
