@@ -31,8 +31,8 @@ from pymol import cmd
 # ⚙️  USER SETTINGS  — edit these before running
 # =============================================================================
 
-# Atom selection used to build the covariance matrix
-PCA_SEL    = "polymer and name CA" # builds covariance matrix from C-alpha atoms
+# SVD performed directly on (n_frames × 3N) Cα coordinate matrix
+PCA_SEL    = "polymer and name CA"
 
 # Number of principal components to compute (≥2 required)
 PCA_NCOMP  = 10
