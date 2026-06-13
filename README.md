@@ -15,9 +15,8 @@ Unlike common PCA approaches, which construct and diagonalize the covariance mat
 
 This code was developed by **Gleb Novikov**
 
-## 🔭 Features (ver. 2.00)
+## 🔭 Features (ver. 1.01)
 
-- Script runs in PyMol or in standalone mode
 - Cross-platform support: Windows, Linux, MacOS
 - Structural alignment using the Kabsch algorithm
 - Principal Component Analysis (Essential Dynamics)
@@ -40,31 +39,14 @@ pip install numpy scipy scikit-learn matplotlib
 ```
 
 ## ⚜️ Usage
-For PyMol mode:
 1. Place `quickPCA.py` in the same directory as your PDB and trajectory files.
 2. Open your structure in PyMOL.
 3. Drag and drop `quickPCA.py` into the PyMOL window.
-   
-For standalone mode:
-1. Place `quickPCA.py` in the same directory or whatever you want.
-2. Use the following commands in the terminal:
-
-```bash
-# With a topology.pdb + netcdf or dcd trajectory
-python quickPCA.py topology.pdb trajectory.nc
-
-# Multi-model PDB (no separate trajectory)
-python quickPCA.py topology.pdb
-
-# With optional arguments
-python quickPCA.py topology.pdb trajectory.nc --interval 10 --temp 310 --ncomp 20
-```
 
 Supported trajectory formats:
 
 ```
-.xtc  .trr (only with PyMol)
-.dcd  .nc (for both PyMol and standalone runs)
+.xtc  .trr .dcd  .nc
 ```
 
 ## ⚙️ Output
